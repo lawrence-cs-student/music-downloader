@@ -36,7 +36,7 @@ export default function App() {
    <div className="body">
       <Search function={HandleSubmit} />
       {downloadLink && <Results link={downloadLink} /> }
-      <img src="dog.PNG"></img>
+      <img src="dog.png"></img>
    </div>
   )
 }
