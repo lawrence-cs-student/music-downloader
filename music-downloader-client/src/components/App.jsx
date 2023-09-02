@@ -6,7 +6,7 @@ import Results from "./Results"
 
 export default function App() {
 
-  const [downloadLink, setDownloadLink] = useState("g")
+  const [downloadLink, setDownloadLink] = useState("")
 
   function HandleSubmit(event, userData) {
     event.preventDefault();
