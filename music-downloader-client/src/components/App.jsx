@@ -11,25 +11,25 @@ export default function App() {
   function HandleSubmit(event, userData) {
     event.preventDefault();
     const query = String(userData);
-    // fetch('http://localhost:3000/api', {
+    fetch('https://music-downloader-server.onrender.com/api', {
 
-    //   method: 'POST',
-    //   headers: {
-    //     "Content-Type": "text/plain"
-    //   },
-    //   body: query
+      method: 'POST',
+      headers: {
+        "Content-Type": "text/plain"
+      },
+      body: query
       
-    // }).then(response => {
-    //   if (response.ok) {
-    //     console.log("success")
-    //     return response.json();
-    //   } else {
-    //     alert("fetching error!")
-    //   }
-    // }).then(fetchedData => {
-    //   setDownloadLink(fetchedData);
-    //   console.log(fetchedData);
-    // })
+    }).then(response => {
+      if (response.ok) {
+        console.log("success")
+        return response.json();
+      } else {
+        alert("fetching error!")
+      }
+    }).then(fetchedData => {
+      setDownloadLink(fetchedData);
+      console.log(fetchedData);
+    })
   }
 
   return (
