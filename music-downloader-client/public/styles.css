@@ -13,7 +13,7 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  /* background-color: antiquewhite; */
+  background-color: antiquewhite;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,8 +37,10 @@
   padding: 3%;
   z-index: 0;
   width: 60%;
-  max-height: 90px;
+  height: 40px;
   font-weight: Medium 500;
+  position: relative;
+  top: 20%;
 }
 
 
@@ -46,7 +48,7 @@ form {
   width: 100%;
   height: 110%;
   background-color: #95BAFF;
-  font-size: 12px;
+  font-size: 100%;
 }
 
 input {
@@ -79,6 +81,8 @@ input::placeholder {
   padding: 5%;
   box-sizing: border-box;
   gap: 20%;
+  position: relative;
+  top: 20%;
 }
 
 .song-container {
@@ -120,12 +124,58 @@ img {
   left: 0;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .search {
+    height: 45px;
+  }
+  form {
+    font-size: 24px;
+  }
+
+  .song-container p {
+    font-size: 14px;
+  }
+
+  .song-container {
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+  }
+  
+  .song-container > div:first-child {
+    width: 100%;
+    height: 50%;
+    background-color: #D84343;
+  }
+  
+  .song-container > div:nth-child(2) {
+    padding: 2%;
+    box-sizing: border-box;
+    height: 50%;
+    bottom: 58%;
+    right: 1%;
+  }
+
+  a {
+    width: 15%;
+    height: 100%;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  
   .search {
     margin-top: 5%;
     height: 5%;
     width: 25%;
     padding: 0;
+    top: 2%;
   }
   
   
@@ -146,7 +196,8 @@ img {
 
   .results {
     max-width: 60%;
-    height: 35%;
+    height: 30%;
+    top: 2%
   }
 
   .song-container p {
@@ -155,7 +206,7 @@ img {
 
   .song-container {
     width: 100%;
-    height: 100%;
+    height: 75%;
     padding: 0;
     padding: 1%;
   }
@@ -190,43 +241,75 @@ img {
 
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 1200px) {
+
+  .search {
+    top: 2%;
+    background-color: #95BAFF;
+    padding: 0;
+    height: 50px;
+    width: 40%;
+  }
+
   form {
+    width: 100%;
+    height: 90%;
+  }
+  
+  input {
+    font-size: 16px;
+    width: 100%;
+    bottom: 10%;
+    height: 100%;
+  }
+
+  input::placeholder {
+    font-size: 80%;
+  }
+
+  .results {
+    top: 2%;
+    width: 70%;
+    padding: 0;
+  }
+  
+  .song-container p {
     font-size: 24px;
   }
 
-  .song-container p {
-    font-size: 14px;
-  }
-
   .song-container {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 120%;
+    padding: 0;
     padding: 1%;
   }
   
   .song-container > div:first-child {
     width: 100%;
-    height: 50%;
+    height: 60%;
     background-color: #D84343;
   }
   
   .song-container > div:nth-child(2) {
     padding: 2%;
     box-sizing: border-box;
-    height: 50%;
-    bottom: 58%;
-    right: 1%;
+    height: 60%;
+    bottom: 70%;
+    right: 0.7%;
   }
-
-
+  
   a {
-    width: 15%;
-    height: 100%;
+    width: 5%;
+    height: 200%;
   }
 
   svg {
     height: 100%;
     width: 100%;
   }
+
+  img {
+    width: 20%;
+  }
 }
+
